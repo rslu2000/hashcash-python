@@ -16,7 +16,7 @@ def mining():
     attempt,answer = source_generation()
     shahash.update(attempt)
     solution = shahash.hexdigest()
-    if solution.startswith('0000'):
+    if solution.startswith('00000'):
         endtime = datetime.datetime.now()
         print solution
         print (endtime - starttime).seconds
