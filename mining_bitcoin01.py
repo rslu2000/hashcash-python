@@ -1,9 +1,6 @@
 #coding=utf-8
-
 import struct, binascii, hashlib
-
 #Block 490000
-
 ver = 536870912
 prev_block = "000000000000000000d3a9237438b8764dab8b5bf24d3e175bfa1c4a255c7287"
 mrkl_root = "7a17aaae5bbb40bd3a3c99a78b1ea4579f309da4758c948ef9bc88b9fa3df82c"
@@ -17,7 +14,7 @@ target_str = target_hexstr.decode('hex')
 
 sha256 = hashlib.sha256
 
-nonce = 1474000000
+nonce = 1474800000
 while nonce < 0x10000000000:
     header = ( struct.pack("<L", ver) + prev_block.decode('hex')[::-1] +
           mrkl_root.decode('hex')[::-1] + struct.pack("<LLL", time_, 
