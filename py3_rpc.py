@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import urllib,base64,json,hashlib,struct,random,time,requests
 
-RPC_URL = "http://104.199.215.247:8332"
+RPC_URL = "http://35.201.191.103:8332"
 RPC_USER = "rslu"
 RPC_PASS = "1234"
 

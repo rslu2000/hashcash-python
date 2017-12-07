@@ -1,4 +1,5 @@
 #coding=utf-8
+#python2
 import struct, binascii, hashlib
 #Block 490000
 ver = 536870912
@@ -17,11 +18,10 @@ sha256 = hashlib.sha256
 nonce = 1474800000
 while nonce < 0x10000000000:
     header = ( struct.pack("<L", ver) + prev_block.decode('hex')[::-1] +
-          mrkl_root.decode('hex')[::-1] + struct.pack("<LLL", time_, 
-bits, nonce))
+          mrkl_root.decode('hex')[::-1] + struct.pack("<LLL", time_, bits, nonce))
     hash = sha256(sha256(header).digest()).digest()
     print nonce, hash[::-1].encode('hex')
     if hash[::-1] < target_str:
-        print 'Mining success'
+        print 'Mining success（挖礦成功）'
         break
     nonce += 1
