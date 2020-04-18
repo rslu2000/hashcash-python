@@ -1,5 +1,6 @@
 #coding:utf-8
 # python2
+# https://repl.it/repls/VividZealousPup
 # https://btc.com/
 # https://www.unixtimestamp.com/index.php
 import struct, binascii, hashlib
