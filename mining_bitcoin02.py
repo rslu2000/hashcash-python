@@ -1,13 +1,19 @@
 #coding:utf-8
-#python2
+# python2
+# https://repl.it/repls/VividZealousPup
+# https://btc.com/
+# https://www.unixtimestamp.com/index.php
 import struct, binascii, hashlib
 
-ver = int(raw_input("請輸入區塊的版本編號："))
+ver = int(raw_input("請輸入區塊的版本編號："),16)
+print ver
 prev_block = raw_input("請輸入前一區塊的哈希值:")
 mrkl_root = raw_input("請輸入梅根樹節點的哈希值:")
 time_ = int(raw_input("請輸入時間戳記："))
-bits = int(raw_input("請輸入難度值:"))
-nonce =int(raw_input("請輸入求解的起始範圍："))
+bits = int(raw_input("請輸入難度值:"),16)
+print bits
+nonce =int(raw_input("請輸入求解的起始範圍："),16)
+print nonce
 
 exp = bits >> 24
 mant = bits & 0xffffff
